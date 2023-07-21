@@ -19,4 +19,11 @@ export class ThoughtComponent implements OnInit {
 
   }
 
+  thoughtWidth(): string {
+    if (this.thought.content.length >= 256) {
+      return 'thought-g'
+    }
+    return 'thought-p'
+  }
+
 }
