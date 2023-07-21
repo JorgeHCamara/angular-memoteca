@@ -3,4 +3,9 @@
     <h2 class="ff-inter">My Thoughts</h2>
     <button routerLink="/createThought" class="button">New thought</button>
   </header>
+  <div class="my-thoughts">
+    <div *ngFor="let thought of thoughtsList">
+      <app-thought></app-thought>
+    </div>
+  </div>
 </section>
