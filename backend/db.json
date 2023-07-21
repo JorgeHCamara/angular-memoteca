@@ -13,9 +13,9 @@
       "template": "template2"
     },
     {
-      "content": "Pensamento de teste sobre o método POST da API do json-server",
+      "content": "Teste da função PUT da aplicação",
       "author": "DEV ANG",
-      "template": "template2",
+      "template": "template1",
       "id": 4
     }
   ]

@@ -4,7 +4,7 @@
   <p class="author"><b>{{ thought.author }}</b></p>
   <div class="thought-component-actions">
     <button class="thought-edit-button">
-      <img src="../../../../assets/images/icone-editar.png" alt="Edit button">
+      <img src="../../../../assets/images/icone-editar.png" routerLink="/thoughts/editThought/{{ thought.id }}" alt="Edit button">
     </button>
     <button class="thought-delete-button" routerLink="/thoughts/deleteThought/{{ thought.id }}">
       <img src="../../../../assets/images/icone-excluir.png" alt="Delete button">
