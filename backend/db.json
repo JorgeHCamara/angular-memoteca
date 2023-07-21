@@ -13,22 +13,10 @@
       "template": "template2"
     },
     {
-      "id": 3,
-      "content": "Angular è il migliore framework!",
-      "author": "Da Vinci",
-      "template": "template3"
-    },
-    {
       "content": "Pensamento de teste sobre o método POST da API do json-server",
       "author": "DEV ANG",
       "template": "template2",
       "id": 4
-    },
-    {
-      "content": "dassadasdsadsadsadsadsadsadsa",
-      "author": "sadasdasdsad",
-      "template": "template1",
-      "id": 5
     }
   ]
 }
