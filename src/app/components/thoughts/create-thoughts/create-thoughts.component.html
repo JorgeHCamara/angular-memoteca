@@ -13,7 +13,7 @@
       id="thought"
       name="thought"
       placeholder="Write your thoughts"
-      [value]="thought.content"
+      [(ngModel)]="thought.content"
     >
     <label for="author">Author or source</label>
     <input
@@ -22,7 +22,7 @@
       id="author"
       name="author"
       placeholder="Write the author or source"
-      [value]="thought.author"
+      [(ngModel)]="thought.author"
     >
     <label for="template">Select your card template:</label>
     <div class="container-radio">
@@ -33,6 +33,7 @@
             name="template-card"
             id="template1"
             value="template1"
+            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -54,6 +55,7 @@
             name="template-card"
             id="template2"
             value="template2"
+            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -75,6 +77,7 @@
             name="template-card"
             id="template3"
             value="template3"
+            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -90,8 +93,8 @@
       </div>
     </div>
     <div class="acoes">
-      <button class="botao">Add thought</button>
-      <button class="botao">Cancel</button>
+      <button (click)="createThought()" class="botao">Add thought</button>
+      <button (click)="cancel()" class="botao">Cancel</button>
     </div>
   </form>
 </section>
