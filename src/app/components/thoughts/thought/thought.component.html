@@ -1,4 +1,4 @@
-<div class="thought {{ thought.template }} ff-roboto-mono thought-p">
+<div class="thought {{ thought.template }} ff-roboto-mono" [ngClass]="thoughtWidth()">
   <img src="../../../../assets/images/{{ thought.template }}.png" alt="Coloured quotation marks">
   <p class="content">{{ thought.content }}</p>
   <p class="author"><b>{{ thought.author }}</b></p>
