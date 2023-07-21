@@ -13,6 +13,7 @@
       id="thought"
       name="thought"
       placeholder="Write your thoughts"
+      [value]="thought.content"
     >
     <label for="author">Author or source</label>
     <input
@@ -21,6 +22,7 @@
       id="author"
       name="author"
       placeholder="Write the author or source"
+      [value]="thought.author"
     >
     <label for="template">Select your card template:</label>
     <div class="container-radio">
@@ -40,8 +42,8 @@
         Preview:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/images/modelo1.png" alt="Blue quotation marks">
-          <p class="conteudo">Here comes the content</p>
-          <p class="autoria"><b>Here comes the author</b></p>
+          <p class="conteudo">{{ thought.content }}</p>
+          <p class="autoria"><b>{{ thought.author }}</b></p>
         </div>
       </div>
 
@@ -61,8 +63,8 @@
         Preview:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/images/modelo2.png" alt="Light blue quotation marks">
-          <p class="conteudo">Here comes the content</p>
-          <p class="autoria"><b>Here comes the author</b></p>
+          <p class="conteudo">{{ thought.content }}</p>
+          <p class="autoria"><b>{{ thought.author }}</b></p>
         </div>
       </div>
 
@@ -82,8 +84,8 @@
         Preview:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/images/modelo3.png" alt="Green quotation marks">
-          <p class="conteudo">Here comes the content</p>
-          <p class="autoria"><b>Here comes the author</b></p>
+          <p class="conteudo">{{ thought.content }}</p>
+          <p class="autoria"><b>{{ thought.author }}</b></p>
         </div>
       </div>
     </div>
