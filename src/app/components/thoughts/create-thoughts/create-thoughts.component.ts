@@ -11,13 +11,22 @@ export class CreateThoughtsComponent implements OnInit {
     id: '1',
     content: 'Learning Angular',
     author: 'Dev',
-    template: ''
+    template: 'template1'
   }
 
   constructor () {}
 
   ngOnInit(): void {
 
+  }
+
+  createThought() {
+    alert('Novo pensamento criado');
+  }
+
+  cancel() {
+    this.thought.content = '';
+    this.thought.author = '';
   }
 
 }
