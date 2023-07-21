@@ -1,21 +1,21 @@
-.acoes {
+.create-thoughts-actions {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
-.botao {
+.button {
   margin: 5px;
   margin-top: 70px;
   width: 200px;
 }
 
-.criar-pensamentos {
+.create-thoughts {
   padding: 2rem 0;
 }
 
-.criar-pensamentos form {
+.create-thoughts form {
   background: #C4EDFF;
 
   border: none;
@@ -27,13 +27,13 @@
   padding: 2rem;
 }
 
-.criar-pensamentos form label {
+.create-thoughts form label {
   color: #154580;
   font-weight: bold;
   margin: 0 0 1rem;
 }
 
-.criar-pensamentos form .input {
+.create-thoughts form .input {
   border: none;
   height: 40px;
   padding: 1rem 2rem;
@@ -42,7 +42,7 @@
 }
 
 
-.criar-pensamentos form .textarea {
+.create-thoughts form .textarea {
   border: none;
   padding: 1rem 2rem;
   border-radius: 20px;
@@ -55,25 +55,25 @@
   flex-wrap: wrap;
 }
 
-.modelos {
+.templates {
   display: flex;
   gap: 2.5rem;
   border: 1px solid red;
 }
 
-.modelo {
+.template {
   background-color: #F8F9FE;
   padding: 1rem;
   max-width: 250px;
   margin: 1rem 0 2rem;
 }
 
-.modelo .conteudo {
+.template .create-thoughts-content {
   margin: 1rem auto;
   word-wrap: break-word;
 }
 
-.modelo .autoria {
+.template .create-thoughts-author {
   word-wrap: break-word;
 }
 
@@ -81,15 +81,15 @@
   margin: 0;
 }
 
-.modelo1 {
+.template1 {
   box-shadow: 8px 8px 0px #154580;
 }
 
-.modelo2 {
+.template2 {
   box-shadow: 8px 8px 0px #6BD1FF;
 }
 
-.modelo3 {
+.template3 {
   box-shadow: 8px 8px 0px #84EEC1;
 }
 
@@ -97,7 +97,7 @@ input[type='radio'] {
   display: none;
 }
 
-.radio-modelo label {
+.radio-template label {
   display: flex;
   align-items: center;
   column-gap: 20px;
