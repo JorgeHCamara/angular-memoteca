@@ -1,4 +1,4 @@
-.mural {
+.my-thoughts {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -12,7 +12,7 @@
   gap: 2rem;
 }
 
-.sem-pensamentos {
+.no-thoughts {
   text-align: center;
   padding: 2rem 0 5rem;
 }
