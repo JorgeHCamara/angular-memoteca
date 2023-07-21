@@ -1,0 +1,22 @@
+{
+  "thoughts": [
+    {
+      "id": 1,
+      "content": "Happy to see you",
+      "author": "Jorge",
+      "template": "template1"
+    },
+    {
+      "id": 1,
+      "content": "Studying Angular",
+      "author": "Dev A",
+      "template": "template2"
+    },
+    {
+      "id": 1,
+      "content": "Angular è il migliore framework!",
+      "author": "Da Vinci",
+      "template": "template3"
+    }
+  ]
+}
