@@ -5,7 +5,7 @@
   </header>
   <div class="my-thoughts">
     <div *ngFor="let thought of thoughtsList">
-      <app-thought></app-thought>
+      <app-thought [thought]="thought"></app-thought>
     </div>
   </div>
 </section>
