@@ -46,4 +46,12 @@ export class CreateThoughtsComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  enableButton(): string {
+    if (this.form.valid) {
+      return 'button'
+    } else {
+      return 'disabled__button'
+    }
+  }
+
 }
