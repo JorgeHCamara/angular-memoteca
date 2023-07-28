@@ -14,6 +14,10 @@
       formControlName="content"
       placeholder="Write your thoughts"
     >
+    <div class="error__message"
+    *ngIf="form.get('content')?.errors?.['required'] && form.get('content')?.touched">
+      Thought is required!
+    </div>
     <label for="author">Author or source</label>
     <input
       type="text"
@@ -22,6 +26,14 @@
       formControlName="author"
       placeholder="Write the author or source"
     >
+    <div class="error__message"
+    *ngIf="form.get('author')?.errors?.['required'] && form.get('author')?.touched">
+      Author or source is required!
+    </div>
+    <div class="error__message"
+    *ngIf="form.get('author')?.errors?.['minlength'] && form.get('author')?.touched">
+      Author or source needs to have at least 3 characters!
+    </div>
     <label for="template">Select your card template:</label>
     <div class="container-radio">
       <div class="radio-template">
