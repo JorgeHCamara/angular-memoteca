@@ -5,35 +5,44 @@
       thought:
     </h2>
   </header>
-  <form action="">
+  <form [formGroup]="form" *ngIf="form">
     <label for="thought">Thought</label>
     <input
       type="textarea"
       class="input"
       id="thought"
-      name="thought"
+      formControlName="content"
       placeholder="Write your thoughts"
-      [(ngModel)]="thought.content"
     >
+    <div class="error__message"
+    *ngIf="form.get('content')?.errors?.['required'] && form.get('content')?.touched">
+      Thought is required!
+    </div>
     <label for="author">Author or source</label>
     <input
       type="text"
       class="input"
       id="author"
-      name="author"
+      formControlName="author"
       placeholder="Write the author or source"
-      [(ngModel)]="thought.author"
     >
+    <div class="error__message"
+    *ngIf="form.get('author')?.errors?.['required'] && form.get('author')?.touched">
+      Author or source is required!
+    </div>
+    <div class="error__message"
+    *ngIf="form.get('author')?.errors?.['minlength'] && form.get('author')?.touched">
+      Author or source need to have at least 3 characters!
+    </div>
     <label for="template">Select your card template:</label>
     <div class="container-radio">
       <div class="radio-template">
         <label for="template1">
           <input
             type="radio"
-            name="template-card"
+            formControlName="template"
             id="template1"
             value="template1"
-            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -43,8 +52,8 @@
         Preview:
         <div class="template template1 ff-roboto-mono">
           <img src="../../../../assets/images/template1.png" alt="Blue quotation marks">
-          <p class="create-thoughts-content">{{ thought.content }}</p>
-          <p class="create-thoughts-author"><b>{{ thought.author }}</b></p>
+          <p class="create-thoughts-content">{{ form.get('content')?.value }}</p>
+          <p class="create-thoughts-author"><b>{{ form.get('author')?.value }}</b></p>
         </div>
       </div>
 
@@ -52,10 +61,9 @@
         <label for="template2">
           <input
             type="radio"
-            name="template-card"
+            formControlName="template"
             id="template2"
             value="template2"
-            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -65,8 +73,8 @@
         Preview:
         <div class="template template2 ff-roboto-mono">
           <img src="../../../../assets/images/template2.png" alt="Light blue quotation marks">
-          <p class="create-thoughts-content">{{ thought.content }}</p>
-          <p class="create-thoughts-author"><b>{{ thought.author }}</b></p>
+          <p class="create-thoughts-content">{{ form.get('content')?.value }}</p>
+          <p class="create-thoughts-author"><b>{{ form.get('author')?.value }}</b></p>
         </div>
       </div>
 
@@ -74,10 +82,9 @@
         <label for="template3">
           <input
             type="radio"
-            name="template-card"
+            formControlName="template"
             id="template3"
             value="template3"
-            [(ngModel)]="thought.template"
           >
           <div class="custom-radio">
             <span></span>
@@ -87,13 +94,19 @@
         Preview:
         <div class="template template3 ff-roboto-mono">
           <img src="../../../../assets/images/template3.png" alt="Green quotation marks">
-          <p class="create-thoughts-content">{{ thought.content }}</p>
-          <p class="create-thoughts-author"><b>{{ thought.author }}</b></p>
+          <p class="create-thoughts-content">{{ form.get('content')?.value }}</p>
+          <p class="create-thoughts-author"><b>{{ form.get('author')?.value }}</b></p>
         </div>
       </div>
     </div>
     <div class="edit-thoughts-actions">
-      <button (click)="editThought()" class="button">Save</button>
+      <button
+      [disabled]="!form.valid"
+      (click)="editThought()"
+      [ngClass]="enableButton()"
+      class="button"
+      >Save
+      </button>
       <button (click)="returnHomePage()" class="button">Return to home page</button>
     </div>
   </form>
